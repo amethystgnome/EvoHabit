@@ -1,12 +1,5 @@
-//
-//  DatabaseManager.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
-
 import SQLite
-import SwiftUI
+import Foundation
 
 class DatabaseManager {
     static let shared = DatabaseManager()
@@ -15,6 +8,7 @@ class DatabaseManager {
 
     private let usersTable = Table("users")
     private let habitsTable = Table("habits")
+    private let completedDaysTable = Table("completedDays")
 
     private let id = Expression<String>("id")
     private let name = Expression<String>("name")
@@ -28,6 +22,7 @@ class DatabaseManager {
     private let startDate = Expression<Date>("startDate")
     private let endDate = Expression<Date>("endDate")
     private let achieved = Expression<Bool>("achieved")
+    private let date = Expression<Date>("date")
 
     init() {
         do {
@@ -66,6 +61,12 @@ class DatabaseManager {
                 table.column(endDate)
                 table.column(achieved)
             })
+
+            try db?.run(completedDaysTable.create(ifNotExists: true) { table in
+                table.column(id, primaryKey: true)
+                table.column(userId)
+                table.column(date)
+            })
         } catch {
             print("Error creating tables: \(error)")
         }
@@ -79,6 +80,13 @@ class DatabaseManager {
                 email <- user.email,
                 password <- user.password
             ))
+            for completedDay in user.completedDays {
+                try db?.run(completedDaysTable.insert(
+                    id <- UUID().uuidString,
+                    self.userId <- user.id.uuidString,
+                    self.date <- completedDay
+                ))
+            }
         } catch {
             print("Error adding user: \(error)")
         }
@@ -87,12 +95,16 @@ class DatabaseManager {
     func getUser(email: String, password: String) -> User? {
         do {
             if let userRow = try db?.pluck(usersTable.filter(self.email == email && self.password == password)) {
+                let completedDays = try db?.prepare(completedDaysTable.filter(self.userId == userRow[self.id])).compactMap { row in
+                    row[self.date]
+                } ?? []
                 let user = User(
                     id: UUID(uuidString: userRow[self.id])!,
                     name: userRow[self.name],
                     email: userRow[self.email],
                     password: userRow[self.password],
-                    habits: getHabits(for: userRow[self.id])
+                    habits: getHabits(for: userRow[self.id]),
+                    completedDays: completedDays
                 )
                 return user
             }
@@ -145,7 +157,61 @@ class DatabaseManager {
         }
         return []
     }
+
+    func deleteHabit(_ habit: Habit) {
+        do {
+            try db?.run(habitsTable.filter(id == habit.id.uuidString).delete())
+        } catch {
+            print("Error deleting habit: \(error)")
+        }
+    }
+
+    func deleteAllHabits(for userId: String) {
+        do {
+            try db?.run(habitsTable.filter(self.userId == userId).delete())
+        } catch {
+            print("Error deleting all habits: \(error)")
+        }
+    }
+
+    func updateHabitAchieved(_ habit: Habit) {
+        do {
+            let habitRow = habitsTable.filter(id == habit.id.uuidString)
+            try db?.run(habitRow.update(achieved <- habit.achieved))
+        } catch {
+            print("Error updating habit: \(error)")
+        }
+    }
+
+    func addCompletedDay(for userId: String, date: Date) {
+        do {
+            try db?.run(completedDaysTable.insert(
+                id <- UUID().uuidString,
+                self.userId <- userId,
+                self.date <- date
+            ))
+        } catch {
+            print("Error adding completed day: \(error)")
+        }
+    }
+
+    func getCompletedDays(for userId: String) -> [Date] {
+        do {
+            let rows = try db?.prepare(completedDaysTable.filter(self.userId == userId))
+            var dates: [Date] = []
+            rows?.forEach { row in
+                dates.append(row[self.date])
+            }
+            return dates
+        } catch {
+            print("Error getting completed days: \(error)")
+        }
+        return []
+    }
 }
+
+
+
 
 
 

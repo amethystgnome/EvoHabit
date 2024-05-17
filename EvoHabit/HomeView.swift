@@ -1,9 +1,3 @@
-//
-//  HomeView.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
 import SwiftUI
 
 struct HomeView: View {
@@ -32,10 +26,14 @@ struct HomeView: View {
                                     Spacer()
                                     Image(systemName: habit.achieved ? "checkmark.circle.fill" : "circle")
                                         .onTapGesture {
-                                            if let index = authViewModel.currentUser?.habits.firstIndex(where: { $0.id == habit.id }) {
-                                                authViewModel.currentUser?.habits[index].achieved.toggle()
-                                            }
+                                            authViewModel.toggleHabitAchieved(habit)
                                         }
+                                    Button(action: {
+                                        authViewModel.deleteHabit(habit)
+                                    }) {
+                                        Image(systemName: "trash")
+                                            .foregroundColor(.red)
+                                    }
                                 }
                             }
                         }
@@ -55,6 +53,15 @@ struct HomeView: View {
                     .sheet(isPresented: $showingAddHabitSheet) {
                         AddHabitView().environmentObject(authViewModel)
                     }
+
+                    // Clear All Habits Button
+                    Button(action: {
+                        authViewModel.deleteAllHabits()
+                    }) {
+                        Text("Clear All Habits")
+                            .foregroundColor(.red)
+                            .padding()
+                    }
                 }
                 .navigationTitle("Hello, \(user.name)!")
             }
@@ -70,6 +77,9 @@ struct HomeView: View {
         return Double(achievedHabits) / Double(habits.count)
     }
 }
+
+
+
 
 
 

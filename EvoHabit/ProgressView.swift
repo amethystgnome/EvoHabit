@@ -6,6 +6,10 @@ struct ProgressReportView: View {
     var body: some View {
         NavigationView {
             VStack {
+                CalendarView()
+                    .environmentObject(authViewModel)
+                    .padding()
+
                 if let user = authViewModel.currentUser, !user.habits.isEmpty {
                     ProgressBar(progress: calculateProgress(habits: user.habits))
                         .frame(height: 20)
@@ -26,7 +30,7 @@ struct ProgressReportView: View {
                                 Text(habit.name)
                                 Spacer()
                                 Text(habit.achieved ? "Achieved" : "Unachieved")
-                                    .foregroundColor(habit.achieved ? .green : .red)
+                                    .foregroundColor(habit.achieved ? .green : .black)
                             }
                         }
                     }
@@ -43,5 +47,8 @@ struct ProgressReportView: View {
         return Double(achievedHabits) / Double(habits.count)
     }
 }
+
+
+
 
 

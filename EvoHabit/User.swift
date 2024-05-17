@@ -1,16 +1,11 @@
-//
-//  User.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
-
 import Foundation
 
 struct User: Identifiable {
-    var id = UUID()
+    let id: UUID
     var name: String
     var email: String
     var password: String
     var habits: [Habit]
+    var completedDays: [Date] // Add this property to track completed days
 }
+

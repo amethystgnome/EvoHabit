@@ -1,9 +1,3 @@
-//
-//  SettingsView.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
 
 import SwiftUI
 
@@ -25,7 +19,6 @@ struct SettingsView: View {
         }
     }
 }
-
 
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06214A062BF6F518006ED3D6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A052BF6F518006ED3D6 /* CalendarView.swift */; };
 		0693FB262BF6B6010083CEC5 /* EvoHabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB252BF6B6010083CEC5 /* EvoHabitApp.swift */; };
 		0693FB282BF6B6010083CEC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB272BF6B6010083CEC5 /* ContentView.swift */; };
 		0693FB2A2BF6B6080083CEC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0693FB292BF6B6080083CEC5 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06214A052BF6F518006ED3D6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		0693FB222BF6B6010083CEC5 /* EvoHabit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvoHabit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0693FB252BF6B6010083CEC5 /* EvoHabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvoHabitApp.swift; sourceTree = "<group>"; };
 		0693FB272BF6B6010083CEC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,20 +126,21 @@
 		0693FB242BF6B6010083CEC5 /* EvoHabit */ = {
 			isa = PBXGroup;
 			children = (
+				0693FB252BF6B6010083CEC5 /* EvoHabitApp.swift */,
 				0693FB4F2BF6B6AA0083CEC5 /* Habit.swift */,
+				0693FB5B2BF6BFCD0083CEC5 /* User.swift */,
 				0693FB5D2BF6C0050083CEC5 /* AuthenticationViewModel.swift */,
 				0693FB5F2BF6C0230083CEC5 /* AuthenticationView.swift */,
+				0693FB512BF6B6D20083CEC5 /* HomeView.swift */,
+				0693FB532BF6B7030083CEC5 /* AddHabitView.swift */,
+				0693FB592BF6B7710083CEC5 /* MainTabView.swift */,
 				0693FB552BF6B7250083CEC5 /* ProgressView.swift */,
 				0693FB612BF6C5B40083CEC5 /* ProgressBar.swift */,
-				0693FB5B2BF6BFCD0083CEC5 /* User.swift */,
-				0693FB512BF6B6D20083CEC5 /* HomeView.swift */,
-				0693FB252BF6B6010083CEC5 /* EvoHabitApp.swift */,
-				0693FB532BF6B7030083CEC5 /* AddHabitView.swift */,
-				0693FB272BF6B6010083CEC5 /* ContentView.swift */,
-				0693FB592BF6B7710083CEC5 /* MainTabView.swift */,
-				0693FB632BF6C5FD0083CEC5 /* LightModeView.swift */,
+				06214A052BF6F518006ED3D6 /* CalendarView.swift */,
 				0693FB572BF6B7540083CEC5 /* SettingsView.swift */,
+				0693FB632BF6C5FD0083CEC5 /* LightModeView.swift */,
 				0693FB652BF6CC670083CEC5 /* DatabaseManager.swift */,
+				0693FB272BF6B6010083CEC5 /* ContentView.swift */,
 				0693FB292BF6B6080083CEC5 /* Assets.xcassets */,
 				0693FB2B2BF6B6080083CEC5 /* Preview Content */,
 			);
@@ -316,6 +319,7 @@
 				0693FB522BF6B6D20083CEC5 /* HomeView.swift in Sources */,
 				0693FB5A2BF6B7710083CEC5 /* MainTabView.swift in Sources */,
 				0693FB282BF6B6010083CEC5 /* ContentView.swift in Sources */,
+				06214A062BF6F518006ED3D6 /* CalendarView.swift in Sources */,
 				0693FB5C2BF6BFCD0083CEC5 /* User.swift in Sources */,
 				0693FB662BF6CC670083CEC5 /* DatabaseManager.swift in Sources */,
 				0693FB5E2BF6C0060083CEC5 /* AuthenticationViewModel.swift in Sources */,

@@ -1,14 +1,7 @@
-//
-//  MainTabView.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
-
 import SwiftUI
 
 struct MainTabView: View {
-    @StateObject private var authViewModel = AuthenticationViewModel()
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
 
     var body: some View {
         Group {
@@ -19,30 +12,43 @@ struct MainTabView: View {
                             Image(systemName: "house")
                             Text("Home")
                         }
-                        .environmentObject(authViewModel)
+                        .onAppear {
+                            print("HomeView appeared")
+                        }
                     
                     ProgressReportView()
                         .tabItem {
                             Image(systemName: "chart.bar")
                             Text("Progress")
                         }
-                        .environmentObject(authViewModel)
+                        .onAppear {
+                            print("ProgressReportView appeared")
+                        }
                     
                     SettingsView()
                         .tabItem {
                             Image(systemName: "gear")
                             Text("Settings")
                         }
-                        .environmentObject(authViewModel)
+                        .onAppear {
+                            print("SettingsView appeared")
+                        }
                 }
                 .accentColor(.purple)
             } else {
                 AuthenticationView()
                     .environmentObject(authViewModel)
+                    .onAppear {
+                        print("AuthenticationView appeared, isAuthenticated: \(authViewModel.isAuthenticated)")
+                    }
             }
         }
     }
 }
+
+
+
+
 
 
 

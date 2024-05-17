@@ -1,10 +1,3 @@
-//
-//  EvoHabitUITests.swift
-//  EvoHabitUITests
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
-
 import XCTest
 
 final class EvoHabitUITests: XCTestCase {

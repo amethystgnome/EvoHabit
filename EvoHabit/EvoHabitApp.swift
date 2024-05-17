@@ -1,20 +1,18 @@
-//
-//  EvoHabitApp.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
 import SwiftUI
 
 @main
 struct HabitTrackerApp: App {
+    @StateObject private var authViewModel = AuthenticationViewModel()
+
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .environmentObject(AuthenticationViewModel())
+                .environmentObject(authViewModel)
+                .onAppear {
+                    print("MainTabView appeared")
+                }
         }
     }
 }
-
 
 

@@ -1,10 +1,3 @@
-//
-//  EvoHabitTests.swift
-//  EvoHabitTests
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
-
 import XCTest
 @testable import EvoHabit
 

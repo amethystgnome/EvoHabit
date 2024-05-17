@@ -1,11 +1,5 @@
-//
-//  AuthenticationView.swift
-//  EvoHabit
-//
-//  Created by Aubrianna Sample on 5/16/24.
-//
-
 import SwiftUI
+import Combine
 
 struct AuthenticationView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
@@ -19,30 +13,33 @@ struct AuthenticationView: View {
             if isLogin {
                 Text("Login")
                     .font(.largeTitle)
+                    .padding()
                 TextField("Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                if let error = authViewModel.authError {
-                    Text(error).foregroundColor(.red)
-                }
+                    .padding()
                 Button("Login") {
+                    print("Login button pressed")
                     authViewModel.login(email: email, password: password)
                 }
                 .padding()
             } else {
                 Text("Sign Up")
                     .font(.largeTitle)
+                    .padding()
                 TextField("Name", text: $name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
                 TextField("Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                if let error = authViewModel.authError {
-                    Text(error).foregroundColor(.red)
-                }
+                    .padding()
                 Button("Sign Up") {
+                    print("Sign Up button pressed")
                     authViewModel.signUp(name: name, email: email, password: password)
                 }
                 .padding()
@@ -50,11 +47,19 @@ struct AuthenticationView: View {
             Button(isLogin ? "Switch to Sign Up" : "Switch to Login") {
                 isLogin.toggle()
             }
+            .padding()
         }
         .padding()
+        .background(Color.white)
+        .onAppear {
+            print("AuthenticationView appeared")
+        }
     }
 }
 
-
-
-
+struct AuthenticationView_Previews: PreviewProvider {
+    static var previews: some View {
+        AuthenticationView()
+            .environmentObject(AuthenticationViewModel())
+    }
+}
