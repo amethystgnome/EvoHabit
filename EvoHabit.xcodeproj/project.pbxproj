@@ -14,6 +14,21 @@
 		0693FB372BF6B6090083CEC5 /* EvoHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB362BF6B6090083CEC5 /* EvoHabitTests.swift */; };
 		0693FB412BF6B6090083CEC5 /* EvoHabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB402BF6B6090083CEC5 /* EvoHabitUITests.swift */; };
 		0693FB432BF6B6090083CEC5 /* EvoHabitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB422BF6B6090083CEC5 /* EvoHabitUITestsLaunchTests.swift */; };
+		0693FB502BF6B6AA0083CEC5 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB4F2BF6B6AA0083CEC5 /* Habit.swift */; };
+		0693FB522BF6B6D20083CEC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB512BF6B6D20083CEC5 /* HomeView.swift */; };
+		0693FB542BF6B7030083CEC5 /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB532BF6B7030083CEC5 /* AddHabitView.swift */; };
+		0693FB562BF6B7250083CEC5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB552BF6B7250083CEC5 /* ProgressView.swift */; };
+		0693FB582BF6B7540083CEC5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB572BF6B7540083CEC5 /* SettingsView.swift */; };
+		0693FB5A2BF6B7710083CEC5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB592BF6B7710083CEC5 /* MainTabView.swift */; };
+		0693FB5C2BF6BFCD0083CEC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB5B2BF6BFCD0083CEC5 /* User.swift */; };
+		0693FB5E2BF6C0060083CEC5 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB5D2BF6C0050083CEC5 /* AuthenticationViewModel.swift */; };
+		0693FB602BF6C0230083CEC5 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB5F2BF6C0230083CEC5 /* AuthenticationView.swift */; };
+		0693FB622BF6C5B40083CEC5 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB612BF6C5B40083CEC5 /* ProgressBar.swift */; };
+		0693FB642BF6C5FD0083CEC5 /* LightModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB632BF6C5FD0083CEC5 /* LightModeView.swift */; };
+		0693FB662BF6CC670083CEC5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693FB652BF6CC670083CEC5 /* DatabaseManager.swift */; };
+		0693FB692BF6CF120083CEC5 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 0693FB682BF6CF120083CEC5 /* SQLite */; };
+		0693FB6B2BF6CF4D0083CEC5 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 0693FB6A2BF6CF4D0083CEC5 /* SQLite */; };
+		0693FB6D2BF6CF6A0083CEC5 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 0693FB6C2BF6CF6A0083CEC5 /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,18 @@
 		0693FB3C2BF6B6090083CEC5 /* EvoHabitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvoHabitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0693FB402BF6B6090083CEC5 /* EvoHabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvoHabitUITests.swift; sourceTree = "<group>"; };
 		0693FB422BF6B6090083CEC5 /* EvoHabitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvoHabitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0693FB4F2BF6B6AA0083CEC5 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		0693FB512BF6B6D20083CEC5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0693FB532BF6B7030083CEC5 /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		0693FB552BF6B7250083CEC5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		0693FB572BF6B7540083CEC5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0693FB592BF6B7710083CEC5 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		0693FB5B2BF6BFCD0083CEC5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0693FB5D2BF6C0050083CEC5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		0693FB5F2BF6C0230083CEC5 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		0693FB612BF6C5B40083CEC5 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		0693FB632BF6C5FD0083CEC5 /* LightModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightModeView.swift; sourceTree = "<group>"; };
+		0693FB652BF6CC670083CEC5 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0693FB692BF6CF120083CEC5 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0693FB6B2BF6CF4D0083CEC5 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0693FB6D2BF6CF6A0083CEC5 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +124,20 @@
 		0693FB242BF6B6010083CEC5 /* EvoHabit */ = {
 			isa = PBXGroup;
 			children = (
+				0693FB4F2BF6B6AA0083CEC5 /* Habit.swift */,
+				0693FB5D2BF6C0050083CEC5 /* AuthenticationViewModel.swift */,
+				0693FB5F2BF6C0230083CEC5 /* AuthenticationView.swift */,
+				0693FB552BF6B7250083CEC5 /* ProgressView.swift */,
+				0693FB612BF6C5B40083CEC5 /* ProgressBar.swift */,
+				0693FB5B2BF6BFCD0083CEC5 /* User.swift */,
+				0693FB512BF6B6D20083CEC5 /* HomeView.swift */,
 				0693FB252BF6B6010083CEC5 /* EvoHabitApp.swift */,
+				0693FB532BF6B7030083CEC5 /* AddHabitView.swift */,
 				0693FB272BF6B6010083CEC5 /* ContentView.swift */,
+				0693FB592BF6B7710083CEC5 /* MainTabView.swift */,
+				0693FB632BF6C5FD0083CEC5 /* LightModeView.swift */,
+				0693FB572BF6B7540083CEC5 /* SettingsView.swift */,
+				0693FB652BF6CC670083CEC5 /* DatabaseManager.swift */,
 				0693FB292BF6B6080083CEC5 /* Assets.xcassets */,
 				0693FB2B2BF6B6080083CEC5 /* Preview Content */,
 			);
@@ -143,6 +185,9 @@
 			dependencies = (
 			);
 			name = EvoHabit;
+			packageProductDependencies = (
+				0693FB682BF6CF120083CEC5 /* SQLite */,
+			);
 			productName = EvoHabit;
 			productReference = 0693FB222BF6B6010083CEC5 /* EvoHabit.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +206,9 @@
 				0693FB342BF6B6090083CEC5 /* PBXTargetDependency */,
 			);
 			name = EvoHabitTests;
+			packageProductDependencies = (
+				0693FB6A2BF6CF4D0083CEC5 /* SQLite */,
+			);
 			productName = EvoHabitTests;
 			productReference = 0693FB322BF6B6090083CEC5 /* EvoHabitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -179,6 +227,9 @@
 				0693FB3E2BF6B6090083CEC5 /* PBXTargetDependency */,
 			);
 			name = EvoHabitUITests;
+			packageProductDependencies = (
+				0693FB6C2BF6CF6A0083CEC5 /* SQLite */,
+			);
 			productName = EvoHabitUITests;
 			productReference = 0693FB3C2BF6B6090083CEC5 /* EvoHabitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -215,6 +266,9 @@
 				Base,
 			);
 			mainGroup = 0693FB192BF6B6000083CEC5;
+			packageReferences = (
+				0693FB672BF6CD8C0083CEC5 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = 0693FB232BF6B6010083CEC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +311,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0693FB582BF6B7540083CEC5 /* SettingsView.swift in Sources */,
+				0693FB502BF6B6AA0083CEC5 /* Habit.swift in Sources */,
+				0693FB522BF6B6D20083CEC5 /* HomeView.swift in Sources */,
+				0693FB5A2BF6B7710083CEC5 /* MainTabView.swift in Sources */,
 				0693FB282BF6B6010083CEC5 /* ContentView.swift in Sources */,
+				0693FB5C2BF6BFCD0083CEC5 /* User.swift in Sources */,
+				0693FB662BF6CC670083CEC5 /* DatabaseManager.swift in Sources */,
+				0693FB5E2BF6C0060083CEC5 /* AuthenticationViewModel.swift in Sources */,
+				0693FB602BF6C0230083CEC5 /* AuthenticationView.swift in Sources */,
 				0693FB262BF6B6010083CEC5 /* EvoHabitApp.swift in Sources */,
+				0693FB542BF6B7030083CEC5 /* AddHabitView.swift in Sources */,
+				0693FB642BF6C5FD0083CEC5 /* LightModeView.swift in Sources */,
+				0693FB622BF6C5B40083CEC5 /* ProgressBar.swift in Sources */,
+				0693FB562BF6B7250083CEC5 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +496,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +526,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +656,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0693FB672BF6CD8C0083CEC5 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0693FB682BF6CF120083CEC5 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0693FB672BF6CD8C0083CEC5 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		0693FB6A2BF6CF4D0083CEC5 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0693FB672BF6CD8C0083CEC5 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		0693FB6C2BF6CF6A0083CEC5 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0693FB672BF6CD8C0083CEC5 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0693FB1A2BF6B6000083CEC5 /* Project object */;
 }

@@ -4,14 +4,17 @@
 //
 //  Created by Aubrianna Sample on 5/16/24.
 //
-
 import SwiftUI
 
 @main
-struct EvoHabitApp: App {
+struct HabitTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environmentObject(AuthenticationViewModel())
         }
     }
 }
+
+
+
